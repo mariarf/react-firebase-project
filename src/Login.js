@@ -1,5 +1,6 @@
 import React , { Component } from "react";
 import fire from "./config/fire";
+import 'bootstrap';
 
 class Login extends Component{
 constructor(props)
@@ -39,11 +40,28 @@ render()
     return(
         <>
         <div class="container">
+            <br/>
+            <h1>Iniciar sesión</h1>
+            <hr/>
             <form>
-                <input type="email" id="email" name="email" placeholder="Ingresa un email" onChange={this.handleChange} value={this.state.email}/>
-                <input name="password" type= "password" onChange={this.handleChange} id="password" placeholder="enter password" value={this.state.password} />
-                <button onClick={this.login}>Login</button>
-                <button onClick={this.signup}>Signup</button>
+                <div class="form-row center">
+                    <label for="userName">Email: </label>
+                </div>
+                <div class="form-row center">
+                    <input type="email" required name="email" class="form-control" id="email" placeholder="Ingrese su email" onChange={this.handleChange} value={this.state.email} />
+                </div>
+                <br/>
+                <div class="form-row center">
+                    <label for="password">Contraseña: </label>
+                </div>
+                <div class="form-row center">
+                    <input type="password"  onChange={this.handleChange} required name="password" class="form-control" id="password" value={this.state.password} placeholder="Ingrese su contraseña" />
+                </div>
+                <br/>
+
+     
+                <button class="boton" onClick={this.login}>Entrar</button>
+                <button class="boton" onClick={this.signup}>Crear cuenta</button>
             </form>
 
         </div>
