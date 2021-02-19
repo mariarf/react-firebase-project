@@ -48,11 +48,11 @@ render()
                     <label for="userName">Email: </label>
                 </div>
                 <div class="form-row center">
-                    <input type="email" required name="email" class="form-control" id="email" placeholder="Ingrese su email" onChange={this.handleChange} value={this.state.email} />
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Ingrese su email" onChange={this.handleChange} value={this.state.email} required/>
                 </div>
                 <br/>
                 <div class="form-row center">
-                    <label for="password">Contraseña: </label>
+                    <label for="password">Contraseña: mín. 6 carácteres.</label>
                 </div>
                 <div class="form-row center">
                     <input type="password"  onChange={this.handleChange} required name="password" class="form-control" id="password" value={this.state.password} placeholder="Ingrese su contraseña" />
